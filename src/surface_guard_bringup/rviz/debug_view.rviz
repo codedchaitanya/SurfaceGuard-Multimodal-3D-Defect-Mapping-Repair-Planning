@@ -1,0 +1,78 @@
+Panels:
+  - Class: rviz_common/Displays
+    Help Height: 78
+    Name: Displays
+    Property Tree Widget:
+      Expanded:
+        - /Global Options1
+        - /Status1
+        - /Wall Plane1
+        - /Defect Cloud1
+        - /Crack Mask1
+      Splitter Ratio: 0.5
+    Tree Height: 549
+Visualization Manager:
+  Class: ""
+  Displays:
+    - Alpha: 0.5
+      Cell Size: 1
+      Class: rviz_default_plugins/Grid
+      Color: 160; 160; 164
+      Enabled: true
+      Line Style:
+        Line Width: 0.03
+        Value: Lines
+      Name: Grid
+      Normal Cell Count: 0
+      Offset:
+        X: 0
+        Y: 0
+        Z: 0
+      Plane: XY
+      plane Cell Count: 10
+      Reference Frame: <Fixed Frame>
+      Value: true
+    - Class: rviz_default_plugins/PointCloud2
+      Enabled: true
+      Name: Wall Plane
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Best Effort
+        Value: /perception/wall_plane
+      Color Transformer: FlatColor
+      Color: 0; 255; 0  # Green Wall
+      Size (m): 0.01
+      Style: Points
+    - Class: rviz_default_plugins/PointCloud2
+      Enabled: true
+      Name: Defect Cloud
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Best Effort
+        Value: /perception/defect_cloud
+      Color Transformer: FlatColor
+      Color: 255; 0; 0  # Red Defects
+      Size (m): 0.02
+      Style: Points
+    - Class: rviz_default_plugins/Image
+      Enabled: true
+      Name: Crack Mask
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Best Effort
+        Value: /perception/crack_mask
+  Global Options:
+    Background Color: 48; 48; 48
+    Fixed Frame: camera_link  # CHANGE THIS if your bag file uses a different frame (e.g., odom, map)
+    Frame Rate: 30
+  Name: root
+  Tools:
+    - Class: rviz_default_plugins/Interact
+    - Class: rviz_default_plugins/MoveCamera
+    - Class: rviz_default_plugins/Select

@@ -1,0 +1,13 @@
+wall_processor_node:
+  ros__parameters:
+    leaf_size: 0.02            # Voxel grid size (meters)
+    ransac_dist_thresh: 0.015  # How far from plane to be considered "wall"
+    cluster_tolerance: 0.05    # Max distance between points to be part of same defect
+    min_cluster_size: 20       # Minimum points to count as a defect
+    max_cluster_size: 5000     # Max points
+
+crack_detector_node:
+  ros__parameters:
+    model_path: "models/crack_segmentation_v1.pt"
+    confidence_threshold: 0.7
+    use_cuda: false
